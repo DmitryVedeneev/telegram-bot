@@ -1,0 +1,5 @@
+sqlalchemy
+openai
+sqlparse
+pandas
+python-telegram-bot

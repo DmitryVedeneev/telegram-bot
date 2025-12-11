@@ -1,11 +1,18 @@
 import logging
+import os
+from dotenv import load_dotenv
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler, CallbackContext, CallbackQueryHandler
 from agent.SQLExecutionAgent import SQLExecutionAgent
 from database.db import get_scheme_description, init_postgres_db, init_sqlite_db
 
-BOT_TOKEN = ''
-    
+load_dotenv()
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+ya_folder_id = os.getenv('YA_FOLDER_ID')
+ya_api_key = os.getenv('YA_API_KEY')
+model = f'gpt://{ya_folder_id}/yandexgpt-lite/latest'
+
 pg_engine, pg_metadata_obj = init_postgres_db()
 sqlite_engine, sqlite_metadata_obj = init_sqlite_db()
 
@@ -34,10 +41,6 @@ app_description = f"""
 Моя задача — помочь с созданием запросов на получение данных из указанной базы данных. 
 Если у вас есть вопросы по SQL-запросам, пожалуйста, задайте их мне, и я постараюсь помочь.
 """
-
-ya_folder_id = ''
-ya_api_key = ''
-model = f'gpt://{ya_folder_id}/yandexgpt-lite/latest'
 
 db_names = {"Bookings": "PostgreSQL", "Test": "SQLite"}
 

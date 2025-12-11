@@ -8,7 +8,6 @@
 
 ## Содержание
 - [Технологии](#технологии)
-- [Использование](#использование)
 - [Разработка](#разработка)
 - [To do](#to-do)
 - [Команда проекта](#команда-проекта)
@@ -21,20 +20,6 @@
 - [PostgreSQL](https://www.postgresql.org/)
 - [SQLite](https://www.sqlite.org/)
 - [YandexGPT-lite](https://yandex.cloud/en/services/yandexgpt)
-
-## Использование
-
-Установите npm-пакет с помощью команды:
-```sh
-$ npm i your-awesome-plugin-name
-```
-
-И добавьте в свой проект:
-```typescript
-import { hi } from "your-awesome-plugin-name";
-
-hi(); // Выведет в консоль "Привет!"
-```
 
 ## Разработка
 

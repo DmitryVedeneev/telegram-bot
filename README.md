@@ -53,6 +53,11 @@ $ pip install requirements.txt
 - YA_FOLDER_ID - [Идентификатор каталога Yandex Cloud](https://yandex.cloud/ru/docs/resource-manager/operations/folder/get-id)
 - YA_API_KEY - [API-ключ Yandex Cloud](https://yandex.cloud/ru/docs/iam/concepts/authorization/api-key)
 
+### Создание тестовой БД PostgreSQL
+По умолчанию, приложение работает с двумя БД
+- PostgreSQL - должна быть запущена на localhost:5431/demo
+- SQLite - создается в памяти приложения
+
 ### Запуск Development сервера
 Чтобы запустить сервер для разработки, выполните команду:
 ```sh
